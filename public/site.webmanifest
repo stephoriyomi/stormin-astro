@@ -1,0 +1,21 @@
+{
+  "name": "Storm Inc",
+  "short_name": "Storm Inc",
+  "description": "Data engineering consultancy. US & EU.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#faf9f5",
+  "theme_color": "#141413",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

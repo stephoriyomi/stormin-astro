@@ -1,0 +1,46 @@
+---
+import '../../styles/faq.css';
+
+const faqs = [
+  {
+    q: 'How do you price engagements?',
+    a: 'We work on either fixed-fee or time-and-materials, depending on how well-defined the scope is. For discovery, audits, or migrations with a clear endpoint, we prefer fixed-fee — you know what you\'re paying and what you\'re getting before we start. For longer-running build work where the scope evolves, T&M with a weekly cap is usually fairer to both sides. We don\'t charge for the initial discovery call, and we\'ll tell you upfront if we\'re not the right fit.',
+  },
+  {
+    q: 'How long does a typical engagement take?',
+    a: 'Most engagements run 8 to 14 weeks end-to-end — from kickoff through hand-off. Shorter audits and architecture reviews can wrap in 2–3 weeks. Larger platform migrations occasionally extend to 4–6 months, but we break those into phased deliveries rather than running one continuous engagement.',
+  },
+  {
+    q: 'Do you work fully remotely?',
+    a: 'Yes. We work remotely across US Eastern and EU Central timezones, with overlap hours that work for both. For longer engagements we can travel for kickoff or critical milestones if it genuinely helps the work — but we don\'t require it, and most clients prefer the lower overhead of remote-first delivery.',
+  },
+  {
+    q: 'What stack do you specialize in?',
+    a: 'Our core stack is Snowflake, BigQuery, and Databricks for warehousing; dbt for transformation and modeling; Airflow and Kafka for orchestration and streaming; and Looker, Hex, and Metabase on the analytics side. For ML and feature engineering we use Feast, MLflow, and the major cloud-native services (SageMaker, Vertex AI). We\'re cloud-agnostic across AWS, GCP, and Azure — and we\'ll always recommend the boring, durable choice over the trendy one.',
+  },
+  {
+    q: 'Can you work with our existing data team, or do you replace them?',
+    a: 'We work alongside existing teams — we\'re not a staffing replacement. The best engagements are the ones where your team is in the room, learning the reasoning behind every architectural decision. Every engagement ends with paired ownership, runbooks, and a documented system your team can extend without us. If you don\'t have a data team yet, we\'ll usually recommend hiring at least one person before we leave so the work doesn\'t stall.',
+  },
+  {
+    q: 'What size company do you typically work with?',
+    a: 'We work with startups (typically post-Series A, with real revenue and real data) and mid-market companies up to a few thousand employees. Our best fit is when you have enough data to need real infrastructure but not enough internal headcount to build it from scratch. We\'re not the right choice for very early-stage startups or enterprises that need a 50-person delivery team.',
+  },
+];
+---
+
+<section id="faq" class="faq-section section fade-in">
+  <div class="container">
+    <div class="section-label"><span>05</span><span>FAQ</span></div>
+    <h2 class="section-title">Before you reach out.</h2>
+
+    <dl class="faq-list">
+      {faqs.map(({ q, a }) => (
+        <div class="faq-item">
+          <dt class="faq-q">{q}</dt>
+          <dd class="faq-a">{a}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>
