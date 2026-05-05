@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://storminc.eu/sitemap-index.xml

@@ -1,0 +1,207 @@
+/* ─── Storm Inc. design system — warm, technical, minimal ─── */
+:root {
+  /* Surfaces — warm cream */
+  --bg-app: #faf9f5;
+  --bg-surface: #f3efe6;
+  --bg-surface-alt: #ebe7da;
+  --bg-card: #ffffff;
+
+  /* Ink */
+  --ink: #141413;
+  --ink-strong: #000000;
+  --ink-muted: #5c5b58;
+  --ink-subtle: #8a8884;
+
+  /* Accent — Anthropic coral */
+  --accent: #cc785c;
+  --accent-strong: #a85c45;
+  --accent-soft: rgba(204, 120, 92, 0.10);
+
+  /* Brand cyan (preserved for logo mark only) */
+  --brand-cyan: #00a8e8;
+
+  /* Rules */
+  --rule: rgba(20, 20, 19, 0.08);
+  --rule-strong: rgba(20, 20, 19, 0.16);
+
+  /* Type */
+  --font-serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "Fira Code", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Spacing — 8pt grid */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  /* Layout */
+  --max-w: 1200px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --bg-app: #0b1426;
+  --bg-surface: #131d33;
+  --bg-surface-alt: #1a2540;
+  --bg-card: #0f1a2e;
+
+  --ink: #e8ecf2;
+  --ink-strong: #ffffff;
+  --ink-muted: #9aa3b5;
+  --ink-subtle: #5d6679;
+
+  --accent: #e09780;
+  --accent-strong: #cc785c;
+  --accent-soft: rgba(224, 151, 128, 0.14);
+
+  --rule: rgba(255, 255, 255, 0.07);
+  --rule-strong: rgba(255, 255, 255, 0.14);
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-app);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 16px;
+  font-feature-settings: "ss01", "cv11";
+  transition: background-color 0.4s var(--ease), color 0.4s var(--ease);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+p { color: var(--ink-muted); }
+a { color: inherit; text-decoration: none; }
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg-app);
+}
+
+/* ─── Reusable primitives ─── */
+.section {
+  padding: var(--space-10) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-label::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.022em;
+  font-weight: 400;
+  color: var(--ink);
+  max-width: 760px;
+  margin-bottom: var(--space-6);
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 13px 22px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  border-radius: var(--radius-md);
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease), transform 0.2s var(--ease);
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--bg-app);
+}
+.btn-primary:hover {
+  background: var(--accent);
+}
+
+.btn-ghost {
+  color: var(--ink);
+  padding: 13px 0;
+}
+.btn-ghost:hover { color: var(--accent); }
+
+.btn-arrow::after {
+  content: "→";
+  display: inline-block;
+  transition: transform 0.2s var(--ease);
+}
+.btn-arrow:hover::after { transform: translateX(3px); }

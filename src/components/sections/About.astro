@@ -1,0 +1,95 @@
+---
+import '../../styles/about.css';
+---
+
+<section id="about" class="about-section section">
+  <div class="container">
+    <div class="section-label"><span>04</span><span>Approach</span></div>
+
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <h2 class="section-title">
+          Built for teams that need answers — <em>not architecture astronauts.</em>
+        </h2>
+        <p class="about-lede">
+          Storm Inc. is a small, senior team. We pick the boring, durable choice
+          over the resume-driven one. We write our reasoning down. We hand it back
+          to you with the keys.
+        </p>
+
+        <ul class="principles">
+          <li>
+            <div class="principle-num">&#9312;</div>
+            <div>
+              <strong>Decisions over decks.</strong>
+              <span> Every architecture choice is a written ADR — alternatives we rejected, and why.</span>
+            </div>
+          </li>
+          <li>
+            <div class="principle-num">&#9313;</div>
+            <div>
+              <strong>Demo-driven delivery.</strong>
+              <span> Two-week increments, real work running on real data. Not slideware.</span>
+            </div>
+          </li>
+          <li>
+            <div class="principle-num">&#9314;</div>
+            <div>
+              <strong>We leave on purpose.</strong>
+              <span> Engagements end with runbooks, paired ownership, and a team that can extend the system without us.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-visual fade-in">
+        <div class="metric-grid">
+          <div class="metric">
+            <div class="metric-num">8<span class="metric-plus">+</span></div>
+            <div class="metric-label">years on the stack</div>
+          </div>
+          <div class="metric">
+            <div class="metric-num">40<span class="metric-plus">+</span></div>
+            <div class="metric-label">pipelines shipped</div>
+          </div>
+          <div class="metric">
+            <div class="metric-num">US<span class="metric-plus">/</span>EU</div>
+            <div class="metric-label">primary timezones</div>
+          </div>
+          <div class="metric">
+            <div class="metric-num">2</div>
+            <div class="metric-label">concurrent engagements (max)</div>
+          </div>
+        </div>
+
+        <div class="radar-card">
+          <div class="radar-header">
+            <span class="radar-label">delivery profile</span>
+            <span class="radar-meta">Self-assessed &middot; Q3 2026</span>
+          </div>
+          <svg class="radar-chart" viewBox="0 0 200 200">
+            <polygon points="100,20 180,160 20,160" fill="none" stroke="var(--rule-strong)" stroke-width="1" />
+            <polygon points="100,55 160,160 40,160" fill="none" stroke="var(--rule)" stroke-width="1" />
+            <polygon points="100,90 140,160 60,160" fill="none" stroke="var(--rule)" stroke-width="1" />
+            <line x1="100" y1="100" x2="100" y2="20" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3" />
+            <line x1="100" y1="100" x2="180" y2="160" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3" />
+            <line x1="100" y1="100" x2="20" y2="160" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3" />
+            <polygon
+              points="100,28 168,152 32,156"
+              fill="rgba(204, 120, 92, 0.18)"
+              stroke="var(--accent)"
+              stroke-width="1.5"
+              class="radar-poly"
+            />
+            <circle cx="100" cy="28" r="3.5" fill="var(--accent)" />
+            <circle cx="168" cy="152" r="3.5" fill="var(--accent)" />
+            <circle cx="32" cy="156" r="3.5" fill="var(--accent)" />
+            <text x="100" y="13" text-anchor="middle" class="radar-text">Speed</text>
+            <text x="183" y="172" text-anchor="middle" class="radar-text">Scale</text>
+            <text x="17" y="172" text-anchor="middle" class="radar-text">Clarity</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

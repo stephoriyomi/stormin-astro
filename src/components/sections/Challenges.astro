@@ -1,0 +1,42 @@
+---
+import '../../styles/challenges.css';
+
+const outcomes = [
+  {
+    label: 'Single source of truth',
+    desc: 'Replace spreadsheet sprawl with governed warehouses your analysts and execs can both trust.',
+  },
+  {
+    label: 'Defensible decisions',
+    desc: 'Every metric traceable to its source. Every model versioned. Every change reviewed.',
+  },
+  {
+    label: 'Foundations that scale',
+    desc: 'Architecture chosen for your stage — not the AWS keynote. Survives 10x growth without a rebuild.',
+  },
+  {
+    label: 'Lower platform risk',
+    desc: 'Compliance, lineage, and observability built in. No black boxes; no on-call surprises.',
+  },
+];
+---
+
+<section class="outcomes section">
+  <div class="container">
+    <div class="section-label"><span>01</span><span>Outcomes</span></div>
+    <h2 class="section-title">
+      Decisions you can defend.<br />
+      Infrastructure that scales without rebuilds.
+    </h2>
+
+    <div class="outcomes-grid">
+      {outcomes.map((item, i) => (
+        <article class="outcome fade-in">
+          <div class="outcome-num">0{i + 1}</div>
+          <h3 class="outcome-label">{item.label}</h3>
+          <p class="outcome-desc">{item.desc}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

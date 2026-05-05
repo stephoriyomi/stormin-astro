@@ -1,0 +1,75 @@
+---
+import '../../styles/services.css';
+
+const services = [
+  {
+    num: '01',
+    title: 'Pipelines & ingestion',
+    description:
+      'Connect anything to anywhere. Batch and streaming, CDC from production databases, schema evolution that doesn\'t break downstream.',
+    stack: ['Airflow', 'Kafka', 'Fivetran', 'dbt'],
+  },
+  {
+    num: '02',
+    title: 'Warehouses & lakes',
+    description:
+      'Cloud warehouse, lakehouse, or hybrid — chosen for your stage. Migration, optimization, and cost engineering included.',
+    stack: ['Snowflake', 'BigQuery', 'Databricks', 'Postgres'],
+  },
+  {
+    num: '03',
+    title: 'Modeling & metrics',
+    description:
+      'Versioned dbt models with tests, lineage, and a metrics layer your BI tools can rely on. End the \'whose number is right\' debate.',
+    stack: ['dbt', 'Cube', 'MetricFlow', 'Looker'],
+  },
+  {
+    num: '04',
+    title: 'Analytics & dashboards',
+    description:
+      'From self-service exploration to executive dashboards. Built once, embedded everywhere — permissions and lineage handled.',
+    stack: ['Looker', 'Hex', 'Metabase', 'Streamlit'],
+  },
+  {
+    num: '05',
+    title: 'Observability & governance',
+    description:
+      'Lineage, freshness, and cost monitoring. Catalogs your team will actually use. SOC 2 / GDPR-ready foundations.',
+    stack: ['Monte Carlo', 'DataHub', 'OpenLineage', 'Terraform'],
+  },
+  {
+    num: '06',
+    title: 'ML & feature engineering',
+    description:
+      'Production-ready feature stores, training pipelines, and model serving. Pragmatic ML — not a data-science museum exhibit.',
+    stack: ['Feast', 'MLflow', 'Sagemaker', 'Vertex'],
+  },
+];
+---
+
+<section id="services" class="services-section section">
+  <div class="container">
+    <div class="section-label"><span>02</span><span>Services</span></div>
+    <h2 class="section-title">
+      A focused toolkit. Specialists, <em>not generalists.</em>
+    </h2>
+    <p class="services-intro">
+      Six practice areas, each led by senior engineers who've shipped this in production at scale.
+    </p>
+
+    <div class="services-grid">
+      {services.map((service) => (
+        <article class="service-card fade-in">
+          <div class="service-num">{service.num}</div>
+          <h3 class="service-title">{service.title}</h3>
+          <p class="service-desc">{service.description}</p>
+          <div class="service-stack">
+            {service.stack.map((tech) => (
+              <span class="stack-tag">{tech}</span>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
