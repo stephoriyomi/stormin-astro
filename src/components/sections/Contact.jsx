@@ -57,7 +57,7 @@ const Contact = () => {
                 <div className="contact-grid">
                     <FadeIn>
                         <div className="contact-intro">
-                            <div className="section-label"><span>05</span><span>Contact</span></div>
+                            <div className="section-label"><span>06</span><span>Contact</span></div>
                             <h2 className="section-title contact-title">
                                 Let's talk about what you're trying to build.
                             </h2>
@@ -69,7 +69,7 @@ const Contact = () => {
                             <div className="contact-meta">
                                 <div className="meta-row">
                                     <span className="meta-label">Available</span>
-                                    <span className="meta-value">2 slots · Q3 2026</span>
+                                    <span className="meta-value">2 slots · this quarter</span>
                                 </div>
                                 <div className="meta-row">
                                     <span className="meta-label">Timezones</span>

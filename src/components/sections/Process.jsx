@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import FadeIn from '../ui/FadeIn.jsx';
 import '../../styles/process.css';
 
 const steps = [
@@ -7,6 +6,7 @@ const steps = [
         num: '01',
         title: 'Discovery',
         weeks: '1-2',
+        duration: '1-2',
         desc: 'Audit current state. Map systems, stakeholders, and data flows. Output: a prioritized roadmap with effort + impact estimates.',
         deliverable: 'Strategy memo + RACI',
     },
@@ -14,6 +14,7 @@ const steps = [
         num: '02',
         title: 'Design',
         weeks: '2-3',
+        duration: '2-3',
         desc: 'Architecture blueprint with explicit tradeoffs. We argue with you, not at you. Decision logs become onboarding docs later.',
         deliverable: 'Architecture diagrams + ADRs',
     },
@@ -21,13 +22,15 @@ const steps = [
         num: '03',
         title: 'Build',
         weeks: '4-8',
+        duration: '4-8',
         desc: 'Iterative delivery in two-week increments. Demo-driven. Tests, lineage, and documentation ship with the code.',
         deliverable: 'Production pipelines + CI/CD',
     },
     {
         num: '04',
         title: 'Hand-off',
-        weeks: '1-2',
+        weeks: '9-10',
+        duration: '1-2',
         desc: 'Runbooks, on-call playbooks, and pair programming. We leave when your team can extend the system without us.',
         deliverable: 'Runbooks + 30-day support',
     },
@@ -68,26 +71,31 @@ const Process = () => {
                     </div>
                 </div>
 
-                <FadeIn>
-                    <div className="step-detail" key={active}>
+                {steps.map((step, i) => (
+                    <div
+                        key={i}
+                        className="step-detail"
+                        style={{ display: active === i ? undefined : 'none' }}
+                        aria-hidden={active !== i}
+                    >
                         <div className="detail-left">
                             <div className="detail-eyebrow">
-                                {steps[active].num} &middot; {steps[active].title}
+                                {step.num} &middot; {step.title}
                             </div>
-                            <p className="detail-desc">{steps[active].desc}</p>
+                            <p className="detail-desc">{step.desc}</p>
                         </div>
                         <div className="detail-right">
                             <div>
                                 <div className="detail-eyebrow">Deliverable</div>
-                                <div className="detail-deliverable">{steps[active].deliverable}</div>
+                                <div className="detail-deliverable">{step.deliverable}</div>
                             </div>
                             <div>
                                 <div className="detail-eyebrow">Duration</div>
-                                <div className="detail-duration">{steps[active].weeks} weeks</div>
+                                <div className="detail-duration">{step.duration} weeks</div>
                             </div>
                         </div>
                     </div>
-                </FadeIn>
+                ))}
             </div>
         </section>
     );

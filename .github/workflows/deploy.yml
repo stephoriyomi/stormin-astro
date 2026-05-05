@@ -20,8 +20,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.WEB3FORMS_ACCESS_KEY }}
 
       - name: Deploy to server
         uses: appleboy/scp-action@v0.1.7

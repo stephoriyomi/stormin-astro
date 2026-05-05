@@ -41,7 +41,7 @@ const Navbar = () => {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-content">
-                <a href="#" className="logo" aria-label="Storm Inc — back to top">
+                <a href="/" className="logo" aria-label="Storm Inc — home">
                     <StormLogo className="logo-img" />
                 </a>
 
