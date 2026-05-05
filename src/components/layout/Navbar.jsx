@@ -38,20 +38,12 @@ const Navbar = () => {
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-    const scrollToSection = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            setIsMenuOpen(false);
-        }
-    };
-
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-content">
-                <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <a href="#" className="logo" aria-label="Storm Inc — back to top">
                     <StormLogo className="logo-img" />
-                </div>
+                </a>
 
                 <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
                     <span></span>
@@ -60,8 +52,8 @@ const Navbar = () => {
                 </div>
 
                 <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-                    <li><button onClick={() => scrollToSection('services')}>Services</button></li>
-                    <li><button onClick={() => scrollToSection('about')}>Approach</button></li>
+                    <li><a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a></li>
+                    <li><a href="#about" onClick={() => setIsMenuOpen(false)}>Approach</a></li>
                     <li className="nav-divider" aria-hidden="true"></li>
                     <li className="theme-toggle">
                         <button onClick={toggleTheme} aria-label="Toggle dark mode">
@@ -69,9 +61,9 @@ const Navbar = () => {
                         </button>
                     </li>
                     <li>
-                        <button onClick={() => scrollToSection('contact')} className="nav-cta">
+                        <a href="#contact" onClick={() => setIsMenuOpen(false)} className="nav-cta">
                             Start a project
-                        </button>
+                        </a>
                     </li>
                 </ul>
             </div>

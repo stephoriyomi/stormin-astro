@@ -5,11 +5,24 @@ import '../../styles/footer.css';
 <footer class="footer">
   <div class="container footer-content">
     <div class="footer-left">
-      <div class="logo">
+      <a href="#" aria-label="Storm Inc — back to top">
         <img src="/storm-logo.svg" alt="Storm Inc." class="logo-img" />
-      </div>
+      </a>
+      <p class="footer-tagline">Data engineering consultancy. US &amp; EU.</p>
       <p class="copyright">© {new Date().getFullYear()} Storm Inc. All rights reserved.</p>
     </div>
-    <div class="footer-right"></div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">Approach</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <address class="footer-address">
+      <a href="mailto:support@storminc.eu">support@storminc.eu</a>
+      <span>Poland, EU</span>
+    </address>
   </div>
 </footer>

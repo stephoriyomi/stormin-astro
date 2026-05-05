@@ -15,12 +15,12 @@ import '../../styles/hero.css';
       </p>
 
       <div class="hero-actions">
-        <button id="btn-contact" class="btn btn-primary btn-arrow">
+        <a href="#contact" class="btn btn-primary btn-arrow">
           Book a discovery call
-        </button>
-        <button id="btn-services" class="btn btn-ghost btn-arrow">
+        </a>
+        <a href="#services" class="btn btn-ghost btn-arrow">
           See how we work
-        </button>
+        </a>
       </div>
 
       <div class="hero-meta">
@@ -86,11 +86,3 @@ sla:          p99 &lt; 90s   &middot;   uptime 99.97%</code></pre>
   </div>
 </section>
 
-<script>
-  document.getElementById('btn-contact')?.addEventListener('click', () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  });
-  document.getElementById('btn-services')?.addEventListener('click', () => {
-    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-  });
-</script>
