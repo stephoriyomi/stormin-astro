@@ -2,7 +2,7 @@ import { useState } from 'react';
 import FadeIn from '../ui/FadeIn.jsx';
 import '../../styles/contact.css';
 
-const WEB3FORMS_ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
+const WEB3FORMS_ACCESS_KEY = '861f8596-a755-46d4-82c1-ed1ea3d158eb';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
